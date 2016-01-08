@@ -13,6 +13,7 @@ using System.Reflection;
 using System.Text;
 using EntityFramework.Extensions;
 using EntityFramework.Reflection;
+using System.Threading;
 
 namespace EntityFramework.Audit
 {
@@ -131,7 +132,7 @@ namespace EntityFramework.Audit
             var auditLog = new AuditLog
             {
                 Date = DateTime.Now,
-                Username = Environment.UserName
+                Username = Thread.CurrentPrincipal.Identity.Name
             };
 
             return UpdateLog(auditLog);

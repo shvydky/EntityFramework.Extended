@@ -15,6 +15,7 @@ namespace EntityFramework.Audit
     /// </summary>
     [XmlRoot(Namespace = AuditNamespace, ElementName = "audit")]
     [DataContract(Name = "audit", Namespace = AuditNamespace)]
+    [XmlInclude(typeof(DateTimeOffset))]
     public class AuditLog
     {
         /// <summary>

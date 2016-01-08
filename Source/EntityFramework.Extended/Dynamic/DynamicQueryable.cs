@@ -11,7 +11,7 @@ using System.Reflection;
 using System.Reflection.Emit;
 using System.Threading;
 
-namespace System.Linq.Dynamic
+namespace EntityFramework.Dynamic
 {
     public static class DynamicQueryable
     {
